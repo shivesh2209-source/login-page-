@@ -1,0 +1,23 @@
+# Create Login GUI using tkinter
+import tkinter as tk
+from tkinter import messagebox
+
+root = tk.Tk()
+root.title("Login")
+root.geometry("300x200")
+
+username_label = tk.Label(root, text="Username:")
+username_label.pack()
+username_entry = tk.Entry(root)
+username_entry.pack()
+
+password_label = tk.Label(root, text="Password:")
+password_label.pack()
+password_entry = tk.Entry(root, show="*")
+password_entry.pack()
+
+login_button = tk.Button(root, text="Login", command=lambda: messagebox.showinfo("Login", "Login successful"))
+login_button.pack()
+
+root.mainloop()
+
